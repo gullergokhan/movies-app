@@ -1,0 +1,75 @@
+
+body {
+    color: white;
+    font-family: Arial, sans-serif; /* Yazı tipi belirle */
+    background-color: #242A32; /* Sayfa arka plan rengi */
+    padding: 20px; /* Sayfa kenar boşluğu */
+}
+  
+  .movie-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(36, 42, 50, 0.8); 
+    width: 15%; 
+    display: inline-block; 
+    vertical-align: top; 
+    margin-right: 1%; 
+    box-sizing: border-box; 
+  }
+  
+
+  .movie-item img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+  
+  
+  .movie-item h3 {
+    font-size: 16px; 
+    margin-bottom: 5px;
+    color: white; 
+  }
+  
+  
+  .movie-item p {
+    font-size: 12px; 
+    margin-bottom: 3px;
+    color: white;}
+  
+ 
+  @media screen and (max-width: 768px) {
+    .movie-item {
+      width: 30%;
+      margin-right: 2%; 
+    }
+  }
+  .empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:gray;
+  }
+  
+  
+  .empty-watchlist img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; 
+  }
+  .delete-button {
+    background-color: #242A32;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  

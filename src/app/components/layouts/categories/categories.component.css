@@ -1,0 +1,138 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .col-6 {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+  
+  .md\:col-3 {
+    flex: 0 0 calc(33.333% - 15px);
+    max-width: calc(33.333% - 15px);
+  }
+  
+  .lg\:col-2 {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+  }
+  
+  .genre-link {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    background-color: var(--yellow);
+    color: #fefefe;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow:  2px 2px #0296E5, -2px -2px 2px #0296E5, 2px -2px 2px #0296E5, -2px 2px 2px #0296E5;
+    border-radius: 6px;
+    border: 1px solid #0296E5;
+    transition: transform 0.3s ease;
+  }
+  
+  .genre-link:hover {
+    transform: translateY(-3px);
+  }
+  
+
+  .dropdown {
+    position: relative;
+    display: none;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #242A32;
+    min-width: 160px;
+    box-shadow: transparent;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu a {
+    color: #fefefe;
+    padding: 12px 16px;
+    background-color: #242A32;
+    
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #0296E5;
+  }
+  .btn-secondary {
+    background-color:#242A32;
+    box-shadow:  2px 2px #0296E5, -2px -2px 2px #0296E5, 2px -2px 2px #0296E5, -2px 2px 2px #0296E5;
+  }
+  
+  @media (min-width: 992px) {
+    .dropdown {
+      display: block;
+    }
+  }
+ 
+  .film-list-container {
+    background-color: #242A32;
+    margin-top: 1rem;
+    border: 1px solid #0296E5;
+    box-shadow:  2px 2px #0296E5, -2px -2px 2px #0296E5, 2px -2px 2px #0296E5, -2px 2px 2px #0296E5;
+    padding: 2rem;
+   ;
+
+    .film-list-inner-container {
+        padding: 1rem;
+
+        img {
+            border: 1px solid #0296E5;
+            border-radius: 5px 5px 0 0;
+        }
+
+        a {
+            text-decoration: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .film-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid #0296E5;
+            border-radius: 0 0 5px 5px;
+            padding-top: 0.1rem;
+            color: white;
+            height: 100%;
+
+          
+        }
+    }
+    
+}

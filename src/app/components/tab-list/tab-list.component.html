@@ -1,0 +1,11 @@
+
+<div class="">
+    <div class="mt-5">
+      <ul class="tabs-items text-white flex justify-between lg:justify-center lg:gap-4  text-[13px] my-7">
+        <li *ngFor="let tab of tabs" [class.active]="activeTab === tab.id" (click)="onTabChange(tab.id)" class="lg:text-xl">
+          {{ tab.label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  

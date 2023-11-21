@@ -1,0 +1,18 @@
+<div class="container">
+    <app-tab-list
+      [tabs]="movieDetailTabs"
+      (tabChange)="tabChange($event)"
+    ></app-tab-list>
+  </div>
+  <div class="reviews  ">
+    <ng-container *ngIf="selectedTab === 'about-movie'">
+      <app-about [about]="aboutMovie"></app-about>
+    </ng-container>
+    <ng-container *ngIf="selectedTab === 'reviews'">
+      <app-review [review]="reviews"></app-review>
+    </ng-container>
+    <ng-container *ngIf="selectedTab === 'cast'">
+      <app-cast [credits]="credits" ></app-cast>
+    </ng-container>
+  </div>
+  

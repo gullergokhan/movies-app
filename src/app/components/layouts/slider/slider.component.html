@@ -1,0 +1,39 @@
+
+<div class="card mt-4">
+  <div id="topTenCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+    <div class="carousel-inner" style="text-align: center;">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <ng-container *ngFor="let film of movieService.topTenMovieList; let i = index">
+            <a [routerLink]="'/featured-movie/' + film.id">
+              <div class="carousel-item-single" *ngIf="i < 5">
+                <img [src]="'https://image.tmdb.org/t/p/original/' + film.poster_path" alt="Movie Poster" class="d-block w-100" style="max-width: 100%; height: auto;">
+                <span class="top-film-order">{{ i + 1 }}</span>
+              </div>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <ng-container *ngFor="let film of movieService.topTenMovieList; let i = index">
+            <a [routerLink]="'/featured-movie/' + film.id">
+              <div class="carousel-item-single" *ngIf="i >= 5 && i < 10">
+                <img [src]="'https://image.tmdb.org/t/p/original/' + film.poster_path" alt="Movie Poster" class="d-block w-100" style="max-width: 100%; height: auto;">
+                <span class="top-film-order">{{ i + 1 }}</span>
+              </div>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#topTenCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#topTenCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

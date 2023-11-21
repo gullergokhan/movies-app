@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="">
+    <h1 class="text-white mb-3">What do you want to watch?</h1>
+      <input
+        class="flex items-center px-5 py-2 border rounded-lg w-full bg-[#3A3F47] text-gray"
+        style="width: 90%;"
+        placeholder="You can search using this field"
+        [(ngModel)]="filterText"
+        (input)="onFilterTextChange()"
+
+      />
+      <span
+        class="mr-2 absolute right-0 flex justify-center items-center top-0 bottom-0"
+      >
+      <img src="/assets/no_search.png" class="" alt="" height="180" width="190"/>
+      </span>
+
+    </div>
+ 
+  </div>
+

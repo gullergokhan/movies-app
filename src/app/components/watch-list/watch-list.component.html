@@ -1,0 +1,23 @@
+<div *ngIf="watchList && watchList.length > 0; else noMovies" class="movie-list">
+    <div *ngFor="let movie of watchList" class="movie-item">
+      <a class="w-[150px]" routerLink="/featured-movie/{{ movie.id }}">
+        <img [src]="getImageUrl(movie.poster_path)" width="137" height="206" alt="" class="object-cover rounded-2xl" />
+      </a>
+      <h3>{{ movie.title }}</h3>
+      <p>Adult: {{ movie.adult }}</p>
+      <p>Budget: {{ movie.budget }}</p>
+      <p>Genres:
+        <span *ngFor="let genre of movie.genres">{{ genre.name }}, </span>
+      </p>
+      <button class="delete-button" (click)="removeFromWatchList(movie.id)">
+        <i class="fas fa-trash-alt"></i> Sil
+      </button>
+    </div>
+  </div>
+  <ng-template #noMovies>
+    <div class="empty-watchlist">
+      <img src="assets/no_search.png" alt="Varsayılan Resim" />
+      <p>There Is No Movie Yet</p>
+    </div>
+  </ng-template>
+  

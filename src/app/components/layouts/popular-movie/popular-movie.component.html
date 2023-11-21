@@ -1,0 +1,19 @@
+<div class="container film-list-container">
+    <div class="row">
+        <h1>Popular</h1>
+      <div class="col-md-3 film-list-inner-container" *ngFor="let movie of movieService.MovieList">
+        <a routerLink="/featured-movie/{{movie.id}}">
+          <div class="">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/original//{{ movie.poster_path }}"
+              alt="Card image cap">
+          </div>
+          <div class="film-title">
+            <p>{{ movie.title }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  

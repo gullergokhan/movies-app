@@ -1,0 +1,19 @@
+
+.navbar {
+    padding: 10px 0;
+    background-color: transparent !important;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fefefe; 
+    text-decoration: none; 
+  }
+  
+  .form-control {
+    width: 150px;
+  }
+  
+ 
+ 

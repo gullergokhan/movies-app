@@ -1,0 +1,41 @@
+<!-- Movies Genres -->
+<div class="container">
+    
+    <div class="grid">
+      <div *ngFor="let genre of genres.slice(0, 7)" class="col-6 md:col-3 lg:col-2">
+        <a class="genre-link" (click)="loadMovies(genre.id)">{{ genre.name }}</a>
+      </div>
+    
+ 
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      More Genres
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li *ngFor="let genre of genres.slice(7, 20)" class="nav-item">
+        <a class="dropdown-item" (click)="loadMovies(genre.id)">{{ genre.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+  <div class="container film-list-container">
+    <div class="row">
+        <div class="col-md-3 film-list-inner-container" *ngFor="let movie of categories">
+            <a routerLink="/featured-movie/{{movie.id}}">
+                <div class="">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/original//{{ movie.poster_path }}"
+                        alt="Card image cap">
+                </div>
+                <div class="film-title">
+                    <p class="title">{{ movie.title }}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+  
+  
+  

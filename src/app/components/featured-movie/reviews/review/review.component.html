@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="content flex mt-5 gap-2 border-b border-solid border-[#3A3F47] py-3" *ngFor="let rw of review">
+        <div class="user-info flex flex-col gap-3 items-center">
+            <div class="user-avatar w-[50px] h-[50px]">
+                <img [src]="rw.author_details.avatar_path ? getImageUrl(rw.author_details.avatar_path) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlI3nknxWv67R3tLozGQtWPQNSG9iQ_5YcEg&usqp=CAU'" 
+                     width="50" height="50" 
+                     (error)="handleImageError($event)" 
+                     class="object-cover rounded-full" 
+                     alt="" />
+            </div>
+            <div class="rating">
+                <span class="text-[#0296E5] text-sm">{{rw.author_details.rating}}</span>
+            </div>
+        </div>
+        <div class="user-content flex-col flex gap-3">
+            <div class="user-name">
+                <p class="text-white text-sm">{{rw.author}}</p>
+            </div>
+            <div class="user-comment">
+                <p class="text-white text-sm">
+                    {{ rw.content | slice:0:200 }}
+                    <span class="text-blue text-underline float-right" *ngIf="rw.content.length > 200">...Read More</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

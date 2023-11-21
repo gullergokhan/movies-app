@@ -1,0 +1,32 @@
+<div class="container xs:px-6content mt-7 flex flex-col">
+    <div class="container relative h-[100px]">
+        <div class="description flex justify-evenly gap-2 items-end">
+            <div class="image absolute bottom-[25px] left-[30px]  lg:w-[200px] lg:h-[230px] ">
+                <img src="https://image.tmdb.org/t/p/original//{{ movie.poster_path }}" width="600" height="230" class=" xs:w-[100px] xs:h-[120px] object-cover rounded-2xl" alt="movie.title" />
+                <div class="bookmark-container">
+                    <button class="bookmark-btn" (click)="saveToLocalStorage(movie.id)">
+                      <i class="fas fa-bookmark"></i> 
+                    </button>
+                  </div>
+            </div>
+            <div class="title w-[40%] lg:w-[60%] ml-[6rem] mt-5">
+                <p class="text-white lg:text-2xl lg:font-bold">{{ movie.title }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="movie-info container mt-3">
+        <p class="text-white">
+            <i class="fas fa-calendar-alt"></i> {{ movie.release_date }}
+        </p>
+        <p class="text-white">
+            <i class="fas fa-clock"></i> {{ movie.runtime }}
+        </p>
+        <p class="text-white genres">
+            <i class="fas fa-tags"></i>
+            <span *ngFor="let genre of movie.genres; let i = index">
+                {{ genre.name }}
+                <span *ngIf="i !== movie.genres.length - 1">, </span>
+            </span>
+        </p>
+    </div>
+</div>

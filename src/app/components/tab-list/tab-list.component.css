@@ -1,0 +1,10 @@
+.tabs-items li {
+    cursor: pointer;
+    padding: 10px;
+    color:gray;
+  }
+  
+  .tabs-items li.active {
+    border-bottom: 2px solid #3A3F47;
+  }
+  
